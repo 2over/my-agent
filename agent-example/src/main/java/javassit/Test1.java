@@ -12,7 +12,7 @@ public class Test1 {
     public static void main(String[] args) throws CannotCompileException, NotFoundException {
         ClassPool classPool = ClassPool.getDefault();
         // 创建一个类
-        CtClass ctClass = classPool.makeClass("com.cover.javassit.Demo1");
+        CtClass ctClass = classPool.makeClass("javassit.Demo1");
         classPool.importPackage(Date.class.getName());
 
         // 设置属性(两种方式)
