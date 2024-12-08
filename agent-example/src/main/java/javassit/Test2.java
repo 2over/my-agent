@@ -9,6 +9,9 @@ import javassist.bytecode.MethodInfo;
 import java.io.IOException;
 import java.lang.reflect.Modifier;
 
+/**
+ * javassist增强原有类
+ */
 public class Test2 {
 
     public static void main(String[] args) throws NotFoundException, CannotCompileException, IOException {

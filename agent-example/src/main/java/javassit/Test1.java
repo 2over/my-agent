@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.lang.reflect.Modifier;
 import java.util.Date;
 
+/**
+ * javassit生成一个新的类
+ */
 public class Test1 {
 
     public static void main(String[] args) throws CannotCompileException, NotFoundException {
