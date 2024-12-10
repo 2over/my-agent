@@ -11,6 +11,8 @@
     <modules>
         <module>agent-example</module>
         <module>hot-update</module>
+        <module>hot-update-example</module>
+        <module>spring-boot-monitor</module>
     </modules>
 
     <dependencies>

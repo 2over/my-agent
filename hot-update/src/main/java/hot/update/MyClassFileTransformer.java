@@ -52,6 +52,9 @@ public class MyClassFileTransformer implements ClassFileTransformer {
     @Override
     public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined,
                             ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
-        return new byte[0];
+        if (!className.equals(getReplaceClassName)) {
+            return classfileBuffer;
+        }
+        return getData(replaceClassPath);
     }
 }
