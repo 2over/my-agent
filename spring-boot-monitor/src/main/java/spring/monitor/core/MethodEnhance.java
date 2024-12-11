@@ -30,7 +30,7 @@ public class MethodEnhance {
     public MethodEnhance(CtMethod ctMethod, CtClass ctClass) {
         this.ctMethod = ctMethod;
         this.ctClass = ctClass;
-        System.out.println("==== 开始增强方法 " + ctMethod.getName() + " =====");
+//        System.out.println("==== 开始增强方法 " + ctMethod.getName() + " =====");
         parse();
         make();
     }
@@ -84,7 +84,7 @@ public class MethodEnhance {
                 "Object ret = null;" +
                 "try {" +
                 "       ret = ($w)" + enhanceMethodName + "($$);" +
-                "} catch (Exception) {" +
+                "} catch (Exception e) {" +
                 "   spring.monitor.core.MonitorPrint.print(\"" + ctMethod.getLongName() + "\", e);" +
                 "} finally {" +
                 "   end = System.currentTimeMillis();" +

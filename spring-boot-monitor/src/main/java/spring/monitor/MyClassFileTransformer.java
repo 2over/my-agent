@@ -12,7 +12,6 @@ public class MyClassFileTransformer implements ClassFileTransformer {
 
         // 第一件事情一定要干这个
         className = className.replace('/', '.');
-        System.out.println(className);
 
         String packageName = "spring.demo";
 

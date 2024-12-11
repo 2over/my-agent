@@ -3,7 +3,7 @@ package spring.demo.controller;
 
 /**
  * 添加VM Options
- * -javaagent:D:\aa-ziya\ziya-agent-teach\sprint-boot-monitor\target\sprint-boot-monitor-1.0-SNAPSHOT.jar
+ * -javaagent:D:\aa-my\my-agent\spring-boot-monitor\target\spring-boot-monitor-1.0-SNAPSHOT.jar
  */
 public class IndexController {
 
