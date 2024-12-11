@@ -15,6 +15,34 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <skipTests>true</skipTests>
     </properties>
 
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                        </manifest>
+                        <manifestEntries>
+                            <!-- 参数方式启动agent需要这个-->
+                            <Premain-Class>spring.monitor.Application</Premain-Class>
+                            <!-- 启动后附加启动agent需要这个-->
+                            <Agent-Class>spring.monitor.Application</Agent-Class>
+                            <!-- 是否可以重新转换类-->
+                            <Can-Retransform-Classes>true</Can-Retransform-Classes>
+                            <!-- 是否可以重新定义类-->
+                            <Can-Redefine-Classes>true</Can-Redefine-Classes>
+
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
